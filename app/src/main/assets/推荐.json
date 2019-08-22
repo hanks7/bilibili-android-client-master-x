@@ -1,0 +1,50 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "title": "快来领取属于你的头像挂件吧！",
+      "value": "https://www.bilibili.com/blackboard/topic/activity-RLa-ZPAev.html",
+      "image": "http://i0.hdslb.com/bfs/archive/fb354d615ac039360fa869cb96e33156060fffa1.jpg",
+      "type": 0,
+      "weight": 1,
+      "remark": "",
+      "hash": "dbace9160e99c4447fb704804af3d0da"
+    },
+    {
+      "title": "广播体操的全新打开方式，等你挑战！",
+      "value": "https://www.bilibili.com/blackboard/activity-guangbocao-h5.html",
+      "image": "http://i0.hdslb.com/bfs/archive/1a66895e17acbe717d3dc695eeb49182b847071c.jpg",
+      "type": 0,
+      "weight": 2,
+      "remark": "",
+      "hash": "9a93ebba7bd3969e0f9efed42d1287ab"
+    },
+    {
+      "title": "《全职高手之巅峰荣耀》背后的男人们",
+      "value": "https://www.bilibili.com/bangumi/play/ep281595/",
+      "image": "http://i0.hdslb.com/bfs/archive/b275abf53e7e5c4a423a3a3011eb0b5b4cb75ff7.jpg",
+      "type": 0,
+      "weight": 3,
+      "remark": "",
+      "hash": "f51517f1cbee797e2a7614a97375efc7"
+    },
+    {
+      "title": "季后赛来了！",
+      "value": "https://www.bilibili.com/read/cv3401362?from=1002",
+      "image": "http://i0.hdslb.com/bfs/archive/2afa7535eb2cf118c26e4bd0cb7d8d1c21e50c1f.png",
+      "type": 0,
+      "weight": 4,
+      "remark": "",
+      "hash": "d39b27f1d21df45411d575005ce17751"
+    },
+    {
+      "title": "来成都，我们一起耍！",
+      "value": "https://www.bilibili.com/blackboard/activity-3Cksk7mng.html",
+      "image": "http://i0.hdslb.com/bfs/archive/187e8ca2ae229538595a29d91bde785f1d9c8b85.jpg",
+      "type": 0,
+      "weight": 5,
+      "remark": "",
+      "hash": "378cab507327f77e449f1dcd4109d94f"
+    }
+  ]
+}

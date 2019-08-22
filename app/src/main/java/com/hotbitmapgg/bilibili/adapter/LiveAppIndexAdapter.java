@@ -77,8 +77,7 @@ public class LiveAppIndexAdapter extends RecyclerView.Adapter {
 
         List<LiveAppIndexInfo.DataBean.BannerBean> banner = mLiveAppIndexInfo.getData().getBanner();
         Observable.from(banner)
-                .forEach(bannerBean -> bannerEntitys.add(new BannerEntity(
-                        bannerBean.getLink(), bannerBean.getTitle(), bannerBean.getImg())));
+                .forEach(bannerBean -> bannerEntitys.add(new BannerEntity(bannerBean.getLink(), bannerBean.getTitle(), bannerBean.getPic())));
 
         for (int i = 0; i < partitionSize; i++) {
             liveSizes.add(tempSize);
@@ -199,9 +198,8 @@ public class LiveAppIndexAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        if (mLiveAppIndexInfo != null) {
-            return 1 + entranceIconRes.length
-                    + mLiveAppIndexInfo.getData().getPartitions().size() * 5;
+        if (mLiveAppIndexInfo != null && mLiveAppIndexInfo.getData()  != null) {
+            return 1 + entranceIconRes.length  + mLiveAppIndexInfo.getData().getPartitions().size() * 5;
         } else {
             return 0;
         }

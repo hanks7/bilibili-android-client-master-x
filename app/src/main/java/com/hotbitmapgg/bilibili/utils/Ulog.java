@@ -9,7 +9,6 @@ import android.util.Log;
  * @function 请填写
  * @email 474664736@qq.com
  */
-
 public class Ulog {
     public static final String TAG = "cc-";
 

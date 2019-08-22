@@ -11,6 +11,8 @@ import android.view.MenuItem;
 
 import com.hotbitmapgg.bilibili.adapter.LiveAppIndexAdapter;
 import com.hotbitmapgg.bilibili.base.RxBaseActivity;
+import com.hotbitmapgg.bilibili.entity.live.LiveAppIndexInfo;
+import com.hotbitmapgg.bilibili.utils.UtilGson;
 import com.hotbitmapgg.ohmybilibili.R;
 import com.hotbitmapgg.bilibili.network.RetrofitHelper;
 
@@ -101,6 +103,8 @@ public class LiveAppIndexActivity extends RxBaseActivity {
                     mLiveAppIndexAdapter.setLiveInfo(liveAppIndexInfo);
                     finishTask();
                 }, throwable -> {
+                    mLiveAppIndexAdapter.setLiveInfo(UtilGson.getJson(LiveAppIndexActivity.this,"LiveAppIndexInfo.json",LiveAppIndexInfo.class));
+                    finishTask();
                 });
     }
 

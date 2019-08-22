@@ -9,8 +9,10 @@ import android.view.View;
 
 import com.hotbitmapgg.bilibili.adapter.LiveAppIndexAdapter;
 import com.hotbitmapgg.bilibili.base.RxLazyFragment;
+import com.hotbitmapgg.bilibili.entity.live.LiveAppIndexInfo;
 import com.hotbitmapgg.bilibili.network.RetrofitHelper;
 import com.hotbitmapgg.bilibili.utils.SnackbarUtil;
+import com.hotbitmapgg.bilibili.utils.UtilGson;
 import com.hotbitmapgg.bilibili.widget.CustomEmptyView;
 import com.hotbitmapgg.ohmybilibili.R;
 
@@ -93,9 +95,14 @@ public class HomeLiveFragment extends RxLazyFragment {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(liveAppIndexInfo -> {
-                    mLiveAppIndexAdapter.setLiveInfo(liveAppIndexInfo);
-                    finishTask();
-                }, throwable -> initEmptyView());
+                            mLiveAppIndexAdapter.setLiveInfo(liveAppIndexInfo);
+                            finishTask();
+                        }, throwable -> {
+                            mLiveAppIndexAdapter.setLiveInfo(UtilGson.getJson(getContext(), "LiveAppIndexInfo.json", LiveAppIndexInfo.class));
+                            finishTask();
+                            //initEmptyView()
+                        }
+                );
     }
 
 

@@ -102,7 +102,7 @@ public class VideoCommentInfo {
     public ArrayList<List> list;
     public int page;
 
-    public class HotList {
+    public static class HotList {
         public String face;
         public int mid;
         public String sex;
@@ -121,7 +121,7 @@ public class VideoCommentInfo {
         public String device;
     }
 
-    public class List {
+    public static class List {
         public String face;
         public int mid;
         public String sex;
@@ -140,7 +140,7 @@ public class VideoCommentInfo {
         public String device;
     }
 
-    public class LevelInfo {
+    public static class LevelInfo {
         public int current_level;
     }
 }

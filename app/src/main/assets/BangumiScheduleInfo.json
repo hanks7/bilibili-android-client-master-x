@@ -1,0 +1,137 @@
+{
+  "code": 0,
+  "message": "success",
+  "result": {
+    "from": 0,
+    "list": [
+      {
+        "bangumi_id": "3326",
+        "cover": "http://i0.hdslb.com/bfs/bangumi/dcbf3c193f4f8c0433d8dee2ee02580de15948b6.jpg",
+        "follow": "121485",
+        "isfinish": "1",
+        "newest_ep_cover": "http://i2.hdslb.com/bfs/archive/97159e3a13cc2a58975033b576f3db032f75cbcb.jpg",
+        "newest_ep_index": "13",
+        "pub_time": "2016-10-03 03:05:00",
+        "season_id": "5538",
+        "tags": [
+          {
+            "tag_name": "泡面"
+          },
+          {
+            "tag_name": "猎奇"
+          },
+          {
+            "tag_name": "游戏改"
+          }
+        ],
+        "title": "青鬼",
+        "total_count": "13"
+      },
+      {
+        "bangumi_id": "3331",
+        "cover": "http://i0.hdslb.com/bfs/bangumi/c74ba43e76c346476c8c09e653d35de69073cc49.jpg",
+        "follow": "185947",
+        "isfinish": "1",
+        "newest_ep_cover": "http://i2.hdslb.com/bfs/archive/716093d71b0006edd427f1fcaa5ee6f1117a0cd9.jpg",
+        "newest_ep_index": "OVA",
+        "pub_time": "2016-10-03 00:00:01",
+        "season_id": "5543",
+        "tags": [
+          {
+            "tag_name": "泡面"
+          },
+          {
+            "tag_name": "搞笑"
+          },
+          {
+            "tag_name": "校园"
+          },
+          {
+            "tag_name": "游戏改"
+          }
+        ],
+        "title": "学园Handsome",
+        "total_count": "12"
+      },
+      {
+        "bangumi_id": "2995",
+        "cover": "http://i0.hdslb.com/bfs/bangumi/e2b46584e29f2349748b48c5fb26ce02fcbca4e8.jpg",
+        "follow": "2191443",
+        "isfinish": "1",
+        "newest_ep_cover": "http://i1.hdslb.com/bfs/archive/10c4878da895099da0435d62c5211fe6e770a2bd.jpg",
+        "newest_ep_index": "12",
+        "pub_time": "2016-07-12 00:30:00",
+        "season_id": "5058",
+        "tags": [
+          {
+            "tag_name": "热血"
+          },
+          {
+            "tag_name": "奇幻"
+          },
+          {
+            "tag_name": "战斗"
+          }
+        ],
+        "title": "路人超能100(灵能百分百)",
+        "total_count": "12"
+      },
+      {
+        "bangumi_id": "2047",
+        "cover": "http://i0.hdslb.com/bfs/bangumi/16a9b2958e18ce0491dade97da59e93a7610da15.jpg",
+        "follow": "56275",
+        "isfinish": "1",
+        "newest_ep_cover": "http://i0.hdslb.com/bfs/bangumi/0aff97ea35dc329c0151f35c23b074c655e4fa5b.jpg",
+        "newest_ep_index": "33",
+        "pub_time": "2015-12-12 00:00:01",
+        "season_id": "3236",
+        "tags": [
+          {
+            "tag_name": "日常"
+          }
+        ],
+        "title": "矶部矶兵卫物语",
+        "total_count": "34"
+      },
+      {
+        "bangumi_id": "1872",
+        "cover": "http://i0.hdslb.com/bfs/bangumi/48b4bd607f04a580a44322a61fe09eca3bf2fb87.jpg",
+        "follow": "47229",
+        "isfinish": "1",
+        "newest_ep_cover": "http://i1.hdslb.com/bfs/archive/b29c41f0eefe90cc7c386eacd544e0371f1b6f1b.jpg",
+        "newest_ep_index": "SP",
+        "pub_time": "2016-12-13 14:30:00",
+        "season_id": "5763",
+        "tags": [
+          {
+            "tag_name": "日常"
+          },
+          {
+            "tag_name": "搞笑"
+          }
+        ],
+        "title": "阿松 SP 赛马轶事",
+        "total_count": "1"
+      },
+      {
+        "bangumi_id": "3230",
+        "cover": "http://i0.hdslb.com/bfs/bangumi/26f499a175f2154564f487fa211ef0f713e6b120.jpg",
+        "follow": "2774",
+        "isfinish": "1",
+        "newest_ep_cover": "http://i1.hdslb.com/bfs/archive/42b1c6541bdbc322136133a711bbecd776034998.jpg",
+        "newest_ep_index": "25",
+        "pub_time": "2016-06-03 00:00:01",
+        "season_id": "5385",
+        "tags": [
+          {
+            "tag_name": "萌系"
+          }
+        ],
+        "title": "猪猪秀 第三季",
+        "total_count": "34"
+      }
+    ],
+    "season_id": "5070",
+    "title": "齐木楠雄的灾难（日播&精选版）"
+  }
+}

@@ -14,6 +14,7 @@ import com.hotbitmapgg.bilibili.base.RxLazyFragment;
 import com.hotbitmapgg.bilibili.entity.video.VideoCommentInfo;
 import com.hotbitmapgg.bilibili.network.RetrofitHelper;
 import com.hotbitmapgg.bilibili.utils.ConstantUtil;
+import com.hotbitmapgg.bilibili.utils.UtilGson;
 import com.hotbitmapgg.ohmybilibili.R;
 
 import java.util.ArrayList;
@@ -93,19 +94,25 @@ public class VideoCommentFragment extends RxLazyFragment {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(videoComment -> {
-                    ArrayList<VideoCommentInfo.List> list = videoComment.list;
-                    ArrayList<VideoCommentInfo.HotList> hotList = videoComment.hotList;
-                    if (list.size() < pageSize) {
-                        loadMoreView.setVisibility(View.GONE);
-                        mAdapter.removeFootView();
-                    }
-                    comments.addAll(list);
-                    hotComments.addAll(hotList);
-                    finishTask();
+                    httpTask(UtilGson.getJson(getContext(), "评论.json", VideoCommentInfo.class));
+
                 }, throwable -> {
-                    loadMoreView.setVisibility(View.GONE);
-                    headView.setVisibility(View.GONE);
+                    httpTask(UtilGson.getJson(getContext(), "评论.json", VideoCommentInfo.class));
+//                    loadMoreView.setVisibility(View.GONE);
+//                    headView.setVisibility(View.GONE);
                 });
+    }
+
+    private void httpTask(VideoCommentInfo videoComment) {
+        ArrayList<VideoCommentInfo.List> list = videoComment.list;
+        ArrayList<VideoCommentInfo.HotList> hotList = videoComment.hotList;
+        if (list.size() < pageSize) {
+            loadMoreView.setVisibility(View.GONE);
+            mAdapter.removeFootView();
+        }
+        comments.addAll(list);
+        hotComments.addAll(hotList);
+        finishTask();
     }
 
 

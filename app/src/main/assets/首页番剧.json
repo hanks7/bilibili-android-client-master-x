@@ -1,0 +1,97 @@
+{
+  "code": 0,
+  "message": "success",
+  "result": [
+    {
+      "cover": "http://i0.hdslb.com/bfs/bangumi/83fb36258cef00f3e809b6eea65e2388d03a0880.jpg",
+      "id": 45497,
+      "is_new": 0,
+      "link": "https://www.bilibili.com/blackboard/topic/activity-A64dxJZE_.html",
+      "title": "【资讯档】2019年第33周",
+      "type": 1,
+      "wid": 78
+    },
+    {
+      "cover": "http://i0.hdslb.com/bfs/bangumi/20feeef7709d10cd06f2e05d435ebe028f57f915.jpg",
+      "id": 45016,
+      "is_new": 0,
+      "link": "https://www.bilibili.com/blackboard/topic/activity-9pq9ZRb2s.html",
+      "title": "【资讯档】2019年第32周",
+      "type": 1,
+      "wid": 78
+    },
+    {
+      "cover": "http://i0.hdslb.com/bfs/bangumi/1177b2af97cc9bb6e4472a673f007fcaee4d73da.jpg",
+      "id": 44598,
+      "is_new": 0,
+      "link": "https://www.bilibili.com/blackboard/topic/activity-Kl7d-7LfJ.html",
+      "title": "【资讯档】2019年第31周",
+      "type": 1,
+      "wid": 78
+    },
+    {
+      "cover": "http://i0.hdslb.com/bfs/bangumi/3ceed7de0cf78358284480e99dad892322f2f399.jpg",
+      "id": 44108,
+      "is_new": 0,
+      "link": "https://www.bilibili.com/blackboard/topic/activity-7wgCvAFDU.html",
+      "title": "【资讯档】2019年第30周",
+      "type": 1,
+      "wid": 78
+    },
+    {
+      "cover": "http://i0.hdslb.com/bfs/bangumi/e55865f40d7a08a8f25545c3530b3c2f2f658191.jpg",
+      "id": 43617,
+      "is_new": 0,
+      "link": "https://www.bilibili.com/blackboard/topic/activity-bnZQ7cowG.html",
+      "title": "【资讯档】2019年第29周",
+      "type": 1,
+      "wid": 78
+    },
+    {
+      "cover": "http://i0.hdslb.com/bfs/bangumi/94d25942c16309698ba68770fe6288b3356a45fd.jpg",
+      "id": 43105,
+      "is_new": 0,
+      "link": "https://www.bilibili.com/blackboard/topic/activity-1fy5iIy-R.html",
+      "title": "【资讯档】2019年第28周",
+      "type": 1,
+      "wid": 78
+    },
+    {
+      "cover": "http://i0.hdslb.com/bfs/bangumi/bf14e14b30ecf93af3e73a22c1097230f21dee94.jpg",
+      "id": 42521,
+      "is_new": 0,
+      "link": "https://www.bilibili.com/blackboard/topic/activity-nDeMxRQA-.html",
+      "title": "【资讯档】2019年第27周",
+      "type": 1,
+      "wid": 78
+    },
+    {
+      "cover": "http://i0.hdslb.com/bfs/bangumi/de1fc7d2d96601cf021b640d695c228ce047fbc9.jpg",
+      "id": 42117,
+      "is_new": 0,
+      "link": "https://www.bilibili.com/blackboard/topic/activity-1ku4ayZyC.html",
+      "title": "【资讯档】2019年第26周",
+      "type": 1,
+      "wid": 78
+    },
+    {
+      "cover": "http://i0.hdslb.com/bfs/bangumi/01788bdb1b4c22fa265b20f6377a8432839d8eb3.jpg",
+      "id": 41661,
+      "is_new": 0,
+      "link": "https://www.bilibili.com/blackboard/topic/activity-C9NGQmk28.html",
+      "title": "【资讯档】2019年第25周",
+      "type": 1,
+      "wid": 78
+    },
+    {
+      "cover": "http://i0.hdslb.com/bfs/bangumi/001bcb1511bb1ce8a8e3fcf5efccd856fa7187ed.jpg",
+      "cursor": 1.56048498045E12,
+      "id": 41308,
+      "is_new": 0,
+      "link": "https://www.bilibili.com/blackboard/topic/activity-IrItBpO4Y.html",
+      "title": "【资讯档】2019年第24周",
+      "type": 1,
+      "wid": 78
+    }
+  ]
+}

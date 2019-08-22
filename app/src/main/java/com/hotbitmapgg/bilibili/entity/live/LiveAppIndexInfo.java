@@ -529,7 +529,7 @@ public class LiveAppIndexInfo {
 
         public static class BannerBean {
             private String title;
-            private String img;
+            private String pic;
             private String remark;
             private String link;
 
@@ -541,12 +541,12 @@ public class LiveAppIndexInfo {
                 this.title = title;
             }
 
-            public String getImg() {
-                return img;
+            public String getPic() {
+                return pic;
             }
 
-            public void setImg(String img) {
-                this.img = img;
+            public void setPic(String pic) {
+                this.pic = pic;
             }
 
             public String getRemark() {

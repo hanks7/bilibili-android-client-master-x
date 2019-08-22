@@ -37,8 +37,7 @@ public class VideoHotCommentAdapter extends AbsRecyclerViewAdapter {
     @Override
     public ClickableViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         bindContext(parent.getContext());
-        return new ItemViewHolder(LayoutInflater.from(getContext()).
-                inflate(R.layout.item_video_comment, parent, false));
+        return new ItemViewHolder(LayoutInflater.from(getContext()).inflate(R.layout.item_video_comment, parent, false));
     }
 
 

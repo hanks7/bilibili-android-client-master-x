@@ -132,17 +132,14 @@ public class HomeBangumiFragment extends RxLazyFragment {
 
     @Override
     protected void loadData() {
+
         RetrofitHelper.getBangumiAPI()
                 .getBangumiAppIndex()
                 .compose(bindToLifecycle())
                 .flatMap(new Func1<BangumiAppIndexInfo, Observable<BangumiRecommendInfo>>() {
                     @Override
                     public Observable<BangumiRecommendInfo> call(BangumiAppIndexInfo bangumiAppIndexInfo) {
-                        banners.addAll(bangumiAppIndexInfo.getResult().getAd().getHead());
-                        bangumibobys.addAll(bangumiAppIndexInfo.getResult().getAd().getBody());
-                        seasonNewBangumis.addAll(bangumiAppIndexInfo.getResult().getPrevious().getList());
-                        season = bangumiAppIndexInfo.getResult().getPrevious().getSeason();
-                        newBangumiSerials.addAll(bangumiAppIndexInfo.getResult().getSerializing());
+                        setData(bangumiAppIndexInfo);
                         return RetrofitHelper.getBangumiAPI().getBangumiRecommended();
                     }
                 })
@@ -154,6 +151,14 @@ public class HomeBangumiFragment extends RxLazyFragment {
                     bangumiRecommends.addAll(resultBeans);
                     finishTask();
                 }, throwable -> initEmptyView());
+    }
+
+    private void setData(BangumiAppIndexInfo bangumiAppIndexInfo) {
+        banners.addAll(bangumiAppIndexInfo.getResult().getAd().getHead());
+        bangumibobys.addAll(bangumiAppIndexInfo.getResult().getAd().getBody());
+        seasonNewBangumis.addAll(bangumiAppIndexInfo.getResult().getPrevious().getList());
+        season = bangumiAppIndexInfo.getResult().getPrevious().getSeason();
+        newBangumiSerials.addAll(bangumiAppIndexInfo.getResult().getSerializing());
     }
 
 
