@@ -19,7 +19,6 @@ public class UtilGson {
     public static void main(String[] args) {
 
 
-
     }
 
 
@@ -95,8 +94,8 @@ public class UtilGson {
      * @return eg:UtilGson.getJson(getContext(), "评论.json", VideoCommentInfo.class)
      */
     public static <T> T getJson(Context context, String fileName, Class<T> cls) {
-
-        String json = getJson(context, fileName);
+        String json = null;
+        json = getJson(context, fileName);
         return toBean(json, cls);
     }
 

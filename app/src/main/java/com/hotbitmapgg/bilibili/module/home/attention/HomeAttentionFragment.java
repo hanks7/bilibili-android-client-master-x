@@ -12,6 +12,7 @@ import com.hotbitmapgg.bilibili.base.RxLazyFragment;
 import com.hotbitmapgg.bilibili.entity.attention.AttentionDynamicInfo;
 import com.hotbitmapgg.bilibili.network.RetrofitHelper;
 import com.hotbitmapgg.bilibili.utils.SnackbarUtil;
+import com.hotbitmapgg.bilibili.utils.UtilGson;
 import com.hotbitmapgg.bilibili.widget.CustomEmptyView;
 import com.hotbitmapgg.ohmybilibili.R;
 
@@ -88,9 +89,19 @@ public class HomeAttentionFragment extends RxLazyFragment {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(feedsBeans -> {
+//                    dynamics.addAll(feedsBeans);
+//                    finishTask();
+
+                    List<AttentionDynamicInfo.DataBean.FeedsBean> feedsBeans2 = UtilGson.getJson(getContext(), "AttentionDynamicInfo.json", AttentionDynamicInfo.class).getData().getFeeds();
+                    dynamics.addAll(feedsBeans2);
+                    finishTask();
+
+                }, throwable -> {
+                    List<AttentionDynamicInfo.DataBean.FeedsBean> feedsBeans = UtilGson.getJson(getContext(), "AttentionDynamicInfo.json", AttentionDynamicInfo.class).getData().getFeeds();
                     dynamics.addAll(feedsBeans);
                     finishTask();
-                }, throwable -> initEmptyView());
+//                    initEmptyView();
+                });
     }
 
 
@@ -118,7 +129,7 @@ public class HomeAttentionFragment extends RxLazyFragment {
         mCustomEmptyView.setVisibility(View.VISIBLE);
         mRecyclerView.setVisibility(View.GONE);
         mCustomEmptyView.setEmptyImage(R.drawable.img_tips_error_load_error);
-         mCustomEmptyView.setEmptyText("加载失败~(≧▽≦)~啦啦啦.");
+        mCustomEmptyView.setEmptyText("加载失败~(≧▽≦)~啦啦啦.");
         SnackbarUtil.showMessage(mRecyclerView, "数据加载失败,请重新加载或者检查网络是否链接");
     }
 

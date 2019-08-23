@@ -52,7 +52,7 @@ public interface BiliApiService {
     /**
      * 首页关注
      */
-    @GET("x/feed/pull?access_key=9afd8a2836e5948e84e037ca5b33309c&actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&mobi_app=iphone&platform=ios&pn=1&ps=30&sign=8d5f090c70b3743a6a7d899d885061f0&ts=1480131936&type=0")
+    @GET("x/feed/pull?_device=android&_hwid=8a326709e1bcf955&_ulv=10000&access_key=d28935de4660236588ca04bd4c4dc281&appkey=1d8b6e7d45233436&build=427000&mobi_app=android&platform=android&pn=1&ps=20&type=0&sign=e40f746ab0c288ca9446d3da9969594c")
     Observable<AttentionDynamicInfo> getAttentionDynamic();
 
     /**

@@ -1,50 +1,956 @@
 {
   "code": 0,
-  "data": [
+  "result": [
     {
-      "title": "快来领取属于你的头像挂件吧！",
-      "value": "https://www.bilibili.com/blackboard/topic/activity-RLa-ZPAev.html",
-      "image": "http://i0.hdslb.com/bfs/archive/fb354d615ac039360fa869cb96e33156060fffa1.jpg",
-      "type": 0,
-      "weight": 1,
-      "remark": "",
-      "hash": "dbace9160e99c4447fb704804af3d0da"
+      "type": "recommend",
+      "head": {
+        "param": "",
+        "goto": "",
+        "style": "gm_av",
+        "title": "热门焦点"
+      },
+      "body": [
+        {
+          "title": "【敖厂长】30年前此开车游戏火遍中国 但其含有更多隐情",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/55959578affcdaa654872610bc8f61778ae52a30.jpg",
+          "param": "64868151",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "132.9万",
+          "danmaku": "2.3万",
+          "up": "敖厂长"
+        },
+        {
+          "title": "世界上最惨不忍睹的荒岛求生(第二集)",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/b317be704d8ccae772650f54dc2c468fbfadf708.jpg",
+          "param": "64807179",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "49.2万",
+          "danmaku": "9659",
+          "up": "黑镖客梦回"
+        },
+        {
+          "title": "吃播猫完结，应大家要求吃猪皮年糕，再来只烤乳鸽，希望不要再咕咕咕......",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/45373dcea9e74b7dccb96219ceb833daa5fb1641.jpg",
+          "param": "64838438",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "70.0万",
+          "danmaku": "1.9万",
+          "up": "花花与三猫CatLive"
+        },
+        {
+          "title": "5分钟油腻挑战",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/293f2fac8aee4dff067c8c02d88143c80ed99531.jpg",
+          "param": "64799414",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "51.2万",
+          "danmaku": "2.6万",
+          "up": "花少北丶"
+        }
+      ]
     },
     {
-      "title": "广播体操的全新打开方式，等你挑战！",
-      "value": "https://www.bilibili.com/blackboard/activity-guangbocao-h5.html",
-      "image": "http://i0.hdslb.com/bfs/archive/1a66895e17acbe717d3dc695eeb49182b847071c.jpg",
-      "type": 0,
-      "weight": 2,
-      "remark": "",
-      "hash": "9a93ebba7bd3969e0f9efed42d1287ab"
+      "type": "live",
+      "head": {
+        "param": "",
+        "goto": "live",
+        "style": "gm_av",
+        "title": "正在直播"
+      },
+      "body": [
+        {
+          "title": "【主舞台】Liquid vs RNG Ti9国际邀请赛",
+          "style": "gm_live",
+          "cover": "http://i0.hdslb.com/bfs/vc/871f5c6c073a95feba055bb473f3a833e2dcb5e7.png",
+          "param": "46936",
+          "goto": "live",
+          "width": 580,
+          "height": 364,
+          "up_face": "http://i0.hdslb.com/bfs/face/f260452b9f91be5b40e5781c00512237aeffec2f.jpg",
+          "up": "哔哩哔哩刀塔2赛事",
+          "online": 411206,
+          "area": "电子竞技",
+          "area_id": 4
+        },
+        {
+          "title": "荣耀60星鲁班单排了解下，",
+          "style": "gm_live",
+          "cover": "http://i0.hdslb.com/bfs/live/012ac39437ff9af77cbd3328f4e38289552e843d.jpg",
+          "param": "9950825",
+          "goto": "live",
+          "width": 580,
+          "height": 364,
+          "up_face": "http://i1.hdslb.com/bfs/face/2dd8a5a0d667c35d822a20d5964471a69481bfc9.jpg",
+          "up": "睡神不醒丶",
+          "online": 135401,
+          "area": "手游直播",
+          "area_id": 12
+        },
+        {
+          "title": "耐看型：今天也是微胖",
+          "style": "gm_live",
+          "cover": "http://i0.hdslb.com/bfs/live/user_cover/321fe0bdc818f99914a16f4b5d4154e76dfe7331.jpg",
+          "param": "50379",
+          "goto": "live",
+          "width": 580,
+          "height": 364,
+          "up_face": "http://i0.hdslb.com/bfs/face/981b1e41df3161d0f003b9d139bd7e7e9509292f.jpg",
+          "up": "猫小毅ぃ",
+          "online": 1387,
+          "area": "唱见舞见",
+          "area_id": 10
+        },
+        {
+          "title": "10点约了个陪玩小给给",
+          "style": "gm_live",
+          "cover": "http://i0.hdslb.com/bfs/live/771bd280cc478e2816ff0d4dbd66c3e6709d6cc8.jpg",
+          "param": "34180",
+          "goto": "live",
+          "width": 580,
+          "height": 364,
+          "up_face": "http://i2.hdslb.com/bfs/face/92458d02231cf69bdcefd00ad62b35920f1fd27b.jpg",
+          "up": "红发杰克丶",
+          "online": 11164,
+          "area": "单机联机",
+          "area_id": 1
+        }
+      ]
     },
     {
-      "title": "《全职高手之巅峰荣耀》背后的男人们",
-      "value": "https://www.bilibili.com/bangumi/play/ep281595/",
-      "image": "http://i0.hdslb.com/bfs/archive/b275abf53e7e5c4a423a3a3011eb0b5b4cb75ff7.jpg",
-      "type": 0,
-      "weight": 3,
-      "remark": "",
-      "hash": "f51517f1cbee797e2a7614a97375efc7"
+      "type": "bangumi_2",
+      "head": {
+        "param": "13",
+        "goto": "subarea",
+        "style": "gs_bangumi",
+        "title": "番剧区"
+      },
+      "body": [
+        {
+          "title": "千枪士",
+          "style": "gs_bangumi",
+          "cover": "http://i0.hdslb.com/bfs/archive/bbc7fc0039f9572fa2ee1fd772288d3bb3f23d32.jpg",
+          "param": "24618",
+          "goto": "bangumi_list",
+          "width": 320,
+          "height": 422,
+          "desc1": "更新到第13话",
+          "play": "229.5万",
+          "status": 2
+        },
+        {
+          "title": "剧场版 K Seven Stories",
+          "style": "gs_bangumi",
+          "cover": "http://i0.hdslb.com/bfs/archive/7a7276ccffc8750dc8c8a83a8bb3acf6252685a7.jpg",
+          "param": "24978",
+          "goto": "bangumi_list",
+          "width": 320,
+          "height": 422,
+          "desc1": "更新到第7话",
+          "play": "578.3万",
+          "status": 13
+        },
+        {
+          "title": "卫宫家今天的饭",
+          "style": "gs_bangumi",
+          "cover": "http://i0.hdslb.com/bfs/archive/5af1f97d09c994014ffe52cff2d6f2ce47e63ca1.jpg",
+          "param": "22504",
+          "goto": "bangumi_list",
+          "width": 320,
+          "height": 422,
+          "desc1": "更新到第13话",
+          "play": "4658.0万",
+          "status": 2
+        },
+        {
+          "title": "工作细胞",
+          "style": "gs_bangumi",
+          "cover": "http://i0.hdslb.com/bfs/archive/07a732f757117d8d51ff6caa3b4b2aa0fc72fd74.jpg",
+          "param": "24588",
+          "goto": "bangumi_list",
+          "width": 320,
+          "height": 422,
+          "desc1": "更新到第Special话",
+          "play": "15202.8万",
+          "status": 13
+        }
+      ]
     },
     {
-      "title": "季后赛来了！",
-      "value": "https://www.bilibili.com/read/cv3401362?from=1002",
-      "image": "http://i0.hdslb.com/bfs/archive/2afa7535eb2cf118c26e4bd0cb7d8d1c21e50c1f.png",
-      "type": 0,
-      "weight": 4,
-      "remark": "",
-      "hash": "d39b27f1d21df45411d575005ce17751"
+      "type": "region",
+      "head": {
+        "param": "1",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "动画区"
+      },
+      "body": [
+        {
+          "title": "请遵守直播间规则【神楽めあ】",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/94eea1dacdfb268bf431e6558629579868067983.jpg",
+          "param": "64882719",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2.4万",
+          "danmaku": "392"
+        },
+        {
+          "title": "【新番资讯】年度最强阵容！带你一口气看2019秋十月新番有哪些",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/52a558ee78f2a4f968157bbc1cdc99b078c4914b.jpg",
+          "param": "64676235",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2.6万",
+          "danmaku": "306"
+        },
+        {
+          "title": "【明日方舟/调香师】当我准备好了，我会飞我们离开这里-Cut My Hair",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/94df7c75b3fb8c7db98f830a7720c26c12f21007.jpg",
+          "param": "64693190",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1.5万",
+          "danmaku": "51"
+        },
+        {
+          "title": "【MAD/平成世代/完结纪念】Hey！Riders Say HenShin——燃烧平成之魂！闪耀于希望的彼方",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/98980ad7d6d3766a3df86c496caba55b66467b3d.jpg",
+          "param": "64640244",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "3.7万",
+          "danmaku": "694"
+        }
+      ]
     },
     {
-      "title": "来成都，我们一起耍！",
-      "value": "https://www.bilibili.com/blackboard/activity-3Cksk7mng.html",
-      "image": "http://i0.hdslb.com/bfs/archive/187e8ca2ae229538595a29d91bde785f1d9c8b85.jpg",
-      "type": 0,
-      "weight": 5,
-      "remark": "",
-      "hash": "378cab507327f77e449f1dcd4109d94f"
+      "type": "region",
+      "head": {
+        "param": "167",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "国创区"
+      },
+      "body": [
+        {
+          "title": "【直播吧歌姬！】回归抢先看！偶像艺能特辑",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/e77e032a98cb01f0a6dd9c4ba745a8ec6b78006f.jpg",
+          "param": "64585587",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1.3万",
+          "danmaku": "357"
+        },
+        {
+          "title": "【全职高手】大电影风评差的原因绝不仅是人物！还有模糊的定位猎奇的剧情和敷衍的电竞",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/d61d515e51a1f7e8263bcaf8841e3aa59dee6080.jpg",
+          "param": "64848301",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1.3万",
+          "danmaku": "188"
+        },
+        {
+          "title": "广播剧《迪奥先生》第一集",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/5d7d8fd5482b01c900a070c1097d617f2bb3e694.jpg",
+          "param": "64876638",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1.7万",
+          "danmaku": "1518"
+        },
+        {
+          "title": "2019最令人失望的国产动画电影：全职高手之巅峰荣耀【国动凌晷】",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/116df2b823bac50990f5db938a7a351c03ce3235.jpg",
+          "param": "64488646",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "18.5万",
+          "danmaku": "2064"
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "3",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "音乐区"
+      },
+      "body": [
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "129",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "舞蹈区"
+      },
+      "body": [
+        {
+          "title": "惊了！tfboys 队长王俊凯舞蹈solo竟是抄袭got7，采访时大言不惭是自己的创意",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/de898f859b988549f98628280f73be75fb80520c.jpg",
+          "param": "64959502",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "418",
+          "danmaku": "130"
+        },
+        {
+          "title": "【多尔】意难平——江厌离cos❤给世界上最好的师姐",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/01a0a3af9974cf2cb4e2651be9a6dbe50d346e55.jpg",
+          "param": "64846514",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2005",
+          "danmaku": "9"
+        },
+        {
+          "title": "【喵九】前辈❤幼稚园小朋友难道就不可以吗",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/381efe02f161833992e3a4ac1c11fba0559d1ed9.jpg",
+          "param": "64630503",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "975",
+          "danmaku": "2"
+        },
+        {
+          "title": "【君若】Booo！\u003c(｀^´)\u003e【p2丢人版】",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/d9f8680c285f9d97629b0bae2857e2154b9da4b8.jpg",
+          "param": "64706254",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "433",
+          "danmaku": "43"
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "4",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "游戏区"
+      },
+      "body": [
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "119",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "鬼畜区"
+      },
+      "body": [
+        {
+          "title": "【全明星】可不可以一直拿第一？",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/8caf77fbf94b1a10295a734112fa7164a8b49660.jpg",
+          "param": "64517470",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "875",
+          "danmaku": "16"
+        },
+        {
+          "title": "前方高能！99%听了会感动的CF枪声音乐！【See you Again】",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/e07738618f56d8e0334f26a0c6b00cfc7c1c0ea1.jpg",
+          "param": "64828893",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "3209",
+          "danmaku": "51"
+        },
+        {
+          "title": "【枪声音乐】人工智障（AIAIAI）",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/bdac4c91b838b8fb84bd3d630434876476ac68aa.jpg",
+          "param": "64590114",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "251",
+          "danmaku": "2"
+        },
+        {
+          "title": "【没有我憨色开不了的车】你所没听过的天使重构（Cyberangel）",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/9f226957cd7400eb38b470a0a281d9ae6fc48f5b.jpg",
+          "param": "64769840",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1.3万",
+          "danmaku": "123"
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "160",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "生活区"
+      },
+      "body": [
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "36",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "科技区"
+      },
+      "body": [
+        {
+          "title": "智能ai全自动化照片处理软件photolemur-小白也能轻松出大片",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/6c95d8acd27e50f98435e8a6501b25df42616b03.jpg",
+          "param": "64638270",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "5488",
+          "danmaku": "20"
+        },
+        {
+          "title": "【开玩啸】儿童玩具工程车战损做旧魔改末日风（疯狂麦克斯）系列2号",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/873a816d9080aa7c892bda5d6dd3271724077650.jpg",
+          "param": "64650915",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1.8万",
+          "danmaku": "419"
+        },
+        {
+          "title": "坐在12岁的老宝马里 我哭了...",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/ba08cbf1971bc0a3551e8ce2ad85cd010d1d1f4e.jpg",
+          "param": "64550767",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "23.5万",
+          "danmaku": "1459"
+        },
+        {
+          "title": "【封面之下】人类唯一的千年帝国：罗马2000年风云 |千年欧陆|第八期|",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/bdec2c3008a26472f7957a0c930ea59e97c1b0c6.jpg",
+          "param": "64538369",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "8802",
+          "danmaku": "166"
+        }
+      ]
+    },
+    {
+      "type": "activity",
+      "head": {
+        "param": "subarea",
+        "goto": "activity",
+        "style": "",
+        "title": "活动中心"
+      },
+      "body": [
+        {
+          "title": "老爹，你最光荣的时刻，是什么时候？",
+          "style": "gl_act",
+          "cover": "http://i0.hdslb.com/bfs/archive/a99f0d649247b58cf763a03dbfb744f5084f6639.jpg",
+          "param": "https://www.bilibili.com/blackboard/activity-HypD2Grgf.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        },
+        {
+          "title": "前方一大波主子(o´ω`o)",
+          "style": "gl_act",
+          "cover": "http://i0.hdslb.com/bfs/archive/5f1bf0b2c416b417beb0435575d03812af3ab964.jpg",
+          "param": "https://www.bilibili.com/blackboard/activity-meme1st-h5.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        },
+        {
+          "title": "属于七夕的故事，属于你的羁绊。",
+          "style": "gl_act",
+          "cover": "http://i0.hdslb.com/bfs/archive/5d86b97c72d348de0b686284925cc8336db7293e.png",
+          "param": "http://www.bilibili.com/blackboard/double7.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        },
+        {
+          "title": "什么，小电视们被绑走了！？",
+          "style": "gl_act",
+          "cover": "http://i0.hdslb.com/bfs/archive/6d606f7f12e847049b537e75ddb22f4842434ced.jpg",
+          "param": "http://www.bilibili.com/blackboard/activity-61dungeon.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "155",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "时尚区"
+      },
+      "body": [
+        {
+          "title": "时尚条纹 - 永不落伍的时尚流行元素（T台混剪）",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/b7b91b2f05ff5026b4a02138cfd27de7fd33ab70.jpg",
+          "param": "64665994",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1668",
+          "danmaku": "86"
+        },
+        {
+          "title": "【豆子】新购入彩妆使用感+日常妆(化妆刷、美妆盒子)|新产品评测初体验|GRWM后附妆容步骤|适合学生党手残党的妆容",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/a18c6abdf7d3b3248259f6c39f274edcbb6d2032.jpg",
+          "param": "64512564",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2584",
+          "danmaku": "155"
+        },
+        {
+          "title": "【知名微商品牌测评2.0】过来听骂，盛传的真珠美学大法扒皮！到底是什么神仙产品？",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/e6d590eaf9a1f753be31e288d49c71fb70dd1135.jpg",
+          "param": "64577938",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2.1万",
+          "danmaku": "294"
+        },
+        {
+          "title": "划船找不到背部发力感？练完还是含胸驼背？注意这个细节让你的背部训练更高效",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/e679815a26a95385860ade0d5427c9c29eaf88e1.jpg",
+          "param": "64700587",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2609",
+          "danmaku": "6"
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "5",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "娱乐区"
+      },
+      "body": [
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "181",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "影视区"
+      },
+      "body": [
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "177",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "纪录片区"
+      },
+      "body": [
+        {
+          "title": "自驾吉普去旅行，山西最高的木塔，河北的空中草原",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/d7e5bdaf5fdc8843c7e9205adff8c76460ae1bcf.jpg",
+          "param": "64648362",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1312"
+        },
+        {
+          "title": "打卡全世界最便宜的米其林三星/俄罗斯服务员小姐姐颜值逆天",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/548ac085bdddec36a232ce61cbc257ac8d276aaf.jpg",
+          "param": "64676561",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "4297",
+          "danmaku": "84"
+        },
+        {
+          "title": "【行迹】西藏行迹手机摄影  两种不同风格的旅游vlog剪辑",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/210c273a037ffbe1fe1b52fed4cd016f11e3f5c2.jpg",
+          "param": "64595664",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1369",
+          "danmaku": "2"
+        },
+        {
+          "title": "GSENSE丨给自己一个大绿棒子之外的新选择：精酿啤酒纪录片《都在酒里》即将上线丨机核",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/e12e0cee76f20db708265248a67c24f681247eaf.jpg",
+          "param": "64462954",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1.5万",
+          "danmaku": "74"
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "23",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "电影区"
+      },
+      "body": [
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        },
+        {
+          "title": "",
+          "style": "gm_av",
+          "cover": "",
+          "param": "",
+          "goto": "av",
+          "width": 350,
+          "height": 219
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "11",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "电视剧区"
+      },
+      "body": [
+        {
+          "title": "【剧情】赛小花的远大前程 2017",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/c1e56c4ae9794abae38d844d4e2fdafd6426123d.jpg",
+          "param": "32637644",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "4002",
+          "danmaku": "10"
+        },
+        {
+          "title": "【漫改/剧情】天国的餐厅 06（石原里美）【仅限台湾地区】",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/98e95a0393c31930a6ef4e4b07d6d9b1f07fb0e8.jpg",
+          "param": "64011247",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "113"
+        },
+        {
+          "title": "【剧情/喜剧】山田孝之的戛纳电影节 07（2017）【山田孝之】",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/4cdc779e6a6b432800edb135758d363f51179ab3.jpg",
+          "param": "61270051",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "929",
+          "danmaku": "14"
+        },
+        {
+          "title": "【士兵突击】马小帅入伍 原版音乐",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/ea770d76637911a7c580f4b43043962d0b6fb78b.png",
+          "param": "64455785",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "11"
+        }
+      ]
     }
   ]
 }

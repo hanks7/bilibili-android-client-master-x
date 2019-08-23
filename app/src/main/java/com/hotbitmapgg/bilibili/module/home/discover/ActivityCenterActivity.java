@@ -17,6 +17,7 @@ import com.hotbitmapgg.bilibili.base.RxBaseActivity;
 import com.hotbitmapgg.bilibili.entity.discover.ActivityCenterInfo;
 import com.hotbitmapgg.bilibili.module.common.BrowserActivity;
 import com.hotbitmapgg.bilibili.utils.ToastUtil;
+import com.hotbitmapgg.bilibili.utils.UtilGson;
 import com.hotbitmapgg.ohmybilibili.R;
 import com.hotbitmapgg.bilibili.network.RetrofitHelper;
 
@@ -124,8 +125,7 @@ public class ActivityCenterActivity extends RxBaseActivity {
                     }
                 })
                 .subscribe(listBeans -> {
-                    activityCenters.addAll(listBeans);
-                    finishTask();
+                    setData(listBeans);
                 }, throwable -> {
                     if (mSwipeRefreshLayout.isRefreshing()) {
                         mSwipeRefreshLayout.setRefreshing(false);
@@ -133,6 +133,16 @@ public class ActivityCenterActivity extends RxBaseActivity {
                     loadMoreView.setVisibility(View.GONE);
                     ToastUtil.ShortToast("加载失败啦,请重新加载~");
                 });
+    }
+
+    /**
+     * 网络请求之后的赋值
+     * @param listBeans
+     */
+    private void setData(List<ActivityCenterInfo.ListBean> listBeans) {
+        ActivityCenterInfo bean = UtilGson.getJson(this, "ActivityCenterInfo.json", ActivityCenterInfo.class);
+        activityCenters.addAll(bean.getList());
+        finishTask();
     }
 
 
