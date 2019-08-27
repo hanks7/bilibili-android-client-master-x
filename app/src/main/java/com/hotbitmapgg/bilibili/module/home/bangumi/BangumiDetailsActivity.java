@@ -192,8 +192,7 @@ public class BangumiDetailsActivity extends RxBaseActivity {
         mTagsLayout.setAdapter(new TagAdapter<BangumiDetailsInfo.ResultBean.TagsBean>(tags) {
             @Override
             public View getView(FlowLayout parent, int position, BangumiDetailsInfo.ResultBean.TagsBean tagsBean) {
-                TextView mTags = (TextView) LayoutInflater.from(BangumiDetailsActivity.this)
-                        .inflate(R.layout.layout_tags_item, parent, false);
+                TextView mTags = (TextView) LayoutInflater.from(BangumiDetailsActivity.this) .inflate(R.layout.layout_tags_item, parent, false);
                 mTags.setText(tagsBean.getTag_name());
                 return mTags;
             }
