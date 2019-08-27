@@ -93,10 +93,18 @@ public class BangumiAppIndexInfo {
             }
 
             public static class BodyBean {
-                private String img;
+                private String img="";
                 private int index;
-                private String link;
-                private String title;
+                private String link="";
+                private String title="";
+
+                public BodyBean() {
+                }
+
+                public BodyBean(String link, String title) {
+                    this.link = link;
+                    this.title = title;
+                }
 
                 public String getImg() {
                     return img;
@@ -132,12 +140,12 @@ public class BangumiAppIndexInfo {
             }
 
             public static class HeadBean {
-                private int id;
-                private String img;
-                private int is_ad;
-                private String link;
+                private int id = 123213;
+                private String img = "";
+                private int is_ad = 1;
+                private String link = "";
                 private String pub_time;
-                private String title;
+                private String title = "";
 
                 public int getId() {
                     return id;
@@ -190,8 +198,8 @@ public class BangumiAppIndexInfo {
         }
 
         public static class PreviousBean {
-            private int season;
-            private int year;
+            private int season=1;
+            private int year=1;
             private List<ListBean> list;
 
             public int getSeason() {
@@ -229,6 +237,13 @@ public class BangumiAppIndexInfo {
                 private int season_status;
                 private String title;
                 private int watching_count;
+
+                public ListBean(String cover, String favourites, String newest_ep_index, String title) {
+                    this.cover = cover;
+                    this.favourites = favourites;
+                    this.newest_ep_index = newest_ep_index;
+                    this.title = title;
+                }
 
                 public String getCover() {
                     return cover;

@@ -3,6 +3,15 @@
   "message": "success",
   "result": [
     {
+      "cover": "http://i0.hdslb.com/bfs/bangumi/c2ab130b41d2d7241e79eb7061ce8de5f942cf07.jpg",
+      "id": 46039,
+      "is_new": 1,
+      "link": "https://www.bilibili.com/blackboard/topic/activity-doW_ktj7e.html",
+      "title": "【资讯档】2019年第34周",
+      "type": 1,
+      "wid": 78
+    },
+    {
       "cover": "http://i0.hdslb.com/bfs/bangumi/83fb36258cef00f3e809b6eea65e2388d03a0880.jpg",
       "id": 45497,
       "is_new": 0,
@@ -76,22 +85,14 @@
     },
     {
       "cover": "http://i0.hdslb.com/bfs/bangumi/01788bdb1b4c22fa265b20f6377a8432839d8eb3.jpg",
+      "cursor": 1.561105560392E12,
       "id": 41661,
       "is_new": 0,
       "link": "https://www.bilibili.com/blackboard/topic/activity-C9NGQmk28.html",
       "title": "【资讯档】2019年第25周",
       "type": 1,
       "wid": 78
-    },
-    {
-      "cover": "http://i0.hdslb.com/bfs/bangumi/001bcb1511bb1ce8a8e3fcf5efccd856fa7187ed.jpg",
-      "cursor": 1.56048498045E12,
-      "id": 41308,
-      "is_new": 0,
-      "link": "https://www.bilibili.com/blackboard/topic/activity-IrItBpO4Y.html",
-      "title": "【资讯档】2019年第24周",
-      "type": 1,
-      "wid": 78
     }
   ]
+
 }

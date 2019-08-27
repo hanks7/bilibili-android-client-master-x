@@ -1,0 +1,121 @@
+{
+  "code": 0,
+  "result": {
+    "ad": {
+      "body": [
+        {
+          "img": "http://i0.hdslb.com/bfs/bangumi/760d22aea398b8933abdc59479dbb873e757b93c.jpg",
+          "index": 0,
+          "link": "https://www.bilibili.com/bangumi/play/ep276632/",
+          "title": "楠明日葉"
+        },
+        {
+          "img": "http://i0.hdslb.com/bfs/bangumi/5a8e62f775ce808842c8222a09fbae7aab24d685.jpg",
+          "index": 1,
+          "link": "https://www.bilibili.com/bangumi/play/ep276277/",
+          "title": "官方延伸"
+        },
+        {
+          "img": "http://i0.hdslb.com/bfs/bangumi/9d9760910e928d120e7c45010b132f765b6fb16e.png",
+          "index": 2,
+          "link": "https://www.bilibili.com/bangumi/play/ep276391/",
+          "title": "KiraFan攻略组"
+        }
+      ],
+      "head": [
+        {
+          "id": 123213,
+          "img": "http://i0.hdslb.com/bfs/bangumi/975ce49ee26ea7c22068dbe566527dfbce942086.jpg",
+          "is_ad": 1,
+          "link": "https://www.bilibili.com/bangumi/play/ep276391/",
+          "title": "【铃木达央&小西克幸】かつて神だった獣たちへ 週替りキャストコメント映像#9"
+        },
+        {
+          "id": 123213,
+          "img": "http://i0.hdslb.com/bfs/bangumi/f5ce0f21b30ad5ca7e2ed23958530989818043b5.jpg",
+          "is_ad": 0,
+          "link": "https://www.bilibili.com/bangumi/play/ep276391/",
+          "title": "【辉夜大小姐】石上优想活下去"
+        },
+        {
+          "id": 123213,
+          "img": "http://i2.hdslb.com/bfs/face/60a9153609998b04301dc5b8ed44c41b537a2268.jpg",
+          "is_ad": 1,
+          "link": "https://www.bilibili.com/bangumi/play/ep276391/",
+          "title": "一只河藏"
+        }
+      ]
+    },
+    "previous": {
+      "list": [
+        {
+          "cover": "http://i0.hdslb.com/bfs/archive/0ca407c3d9b1febfd0d8e005f920695b346aa6ec.png",
+          "favourites": "1",
+          "is_finish": 0,
+          "last_time": 0,
+          "newest_ep_index": "",
+          "pub_time": 0,
+          "season_id": 0,
+          "season_status": 0,
+          "title": "哔哩哔哩番剧",
+          "watching_count": 0
+        },
+        {
+          "cover": "http://i2.hdslb.com/bfs/face/60a9153609998b04301dc5b8ed44c41b537a2268.jpg",
+          "favourites": "1",
+          "is_finish": 0,
+          "last_time": 0,
+          "newest_ep_index": "",
+          "pub_time": 0,
+          "season_id": 0,
+          "season_status": 0,
+          "title": "【7月】君主·埃尔梅罗二世事件簿 魔眼收集列车 Grace note 08【独家正版】",
+          "watching_count": 0
+        },
+        {
+          "cover": "http://i2.hdslb.com/bfs/face/60a9153609998b04301dc5b8ed44c41b537a2268.jpg",
+          "favourites": "1",
+          "is_finish": 0,
+          "last_time": 0,
+          "newest_ep_index": "",
+          "pub_time": 0,
+          "season_id": 0,
+          "season_status": 0,
+          "title": "【7月】擅长捉弄的高木同学 第二季 08【独家正版】",
+          "watching_count": 0
+        }
+      ],
+      "season": 1,
+      "year": 1
+    },
+    "serializing": [
+      {
+        "is_finish": 0,
+        "is_started": 0,
+        "last_time": 0,
+        "pub_time": 0,
+        "season_id": 0,
+        "season_status": 0,
+        "watching_count": 0
+      },
+      {
+        "is_finish": 0,
+        "is_started": 0,
+        "last_time": 0,
+        "pub_time": 0,
+        "season_id": 0,
+        "season_status": 0,
+        "watching_count": 0
+      },
+      {
+        "is_finish": 0,
+        "is_started": 0,
+        "last_time": 0,
+        "pub_time": 0,
+        "season_id": 0,
+        "season_status": 0,
+        "watching_count": 0
+      }
+    ]
+  }
+}
