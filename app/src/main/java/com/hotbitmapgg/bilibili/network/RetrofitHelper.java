@@ -15,6 +15,7 @@ import com.hotbitmapgg.bilibili.network.api.UserService;
 import com.hotbitmapgg.bilibili.network.api.VipService;
 import com.hotbitmapgg.bilibili.network.auxiliary.ApiConstants;
 import com.hotbitmapgg.bilibili.utils.CommonUtil;
+import com.hotbitmapgg.bilibili.utils.Ulog;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,6 +27,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.internal.Platform;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -106,7 +108,13 @@ public class RetrofitHelper {
      * 初始化OKHttpClient,设置缓存,设置超时时间,设置打印日志,设置UA拦截器
      */
     private static void initOkHttpClient() {
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
+            @Override
+            public void log(String message) {
+                Platform.get().log(message);
+                Ulog.i("okhttp",message);
+            }
+        });
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         if (mOkHttpClient == null) {
             synchronized (RetrofitHelper.class) {

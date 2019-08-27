@@ -21,7 +21,6 @@
             app:expandedTitleTextAppearance="@style/CollapsingToolbarTitleStyle.About"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
-
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/vip_head_layout_height"
