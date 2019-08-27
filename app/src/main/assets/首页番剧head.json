@@ -4,22 +4,56 @@
     "ad": {
       "body": [
         {
-          "img": "http://i0.hdslb.com/bfs/bangumi/760d22aea398b8933abdc59479dbb873e757b93c.jpg",
-          "index": 0,
-          "link": "https://www.bilibili.com/bangumi/play/ep276632/",
-          "title": "楠明日葉"
-        },
-        {
-          "img": "http://i0.hdslb.com/bfs/bangumi/5a8e62f775ce808842c8222a09fbae7aab24d685.jpg",
+          "id": 0,
+          "title": "cop",
+          "image": "http://i0.hdslb.com/bfs/bangumi/760d22aea398b8933abdc59479dbb873e757b93c.jpg",
+          "hash": "",
+          "uri": "https://www.bilibili.com/bangumi/play/ep276632/",
+          "resource_id": 454,
+          "request_id": "1566876038881",
+          "is_ad": false,
+          "cm_mark": 0,
           "index": 1,
-          "link": "https://www.bilibili.com/bangumi/play/ep276277/",
-          "title": "官方延伸"
+          "server_type": 0
         },
         {
-          "img": "http://i0.hdslb.com/bfs/bangumi/9d9760910e928d120e7c45010b132f765b6fb16e.png",
+          "id": 0,
+          "title": "猎兽神兵",
+          "image": "http://i0.hdslb.com/bfs/bangumi/5a8e62f775ce808842c8222a09fbae7aab24d685.jpg",
+          "hash": "",
+          "uri": "https://www.bilibili.com/bangumi/play/ep276277/",
+          "resource_id": 454,
+          "request_id": "1566876038881",
+          "is_ad": false,
+          "cm_mark": 0,
           "index": 2,
-          "link": "https://www.bilibili.com/bangumi/play/ep276391/",
-          "title": "KiraFan攻略组"
+          "server_type": 0
+        },
+        {
+          "id": 0,
+          "title": "冰海战记",
+          "image": "http://i0.hdslb.com/bfs/bangumi/760d22aea398b8933abdc59479dbb873e757b93c.jpg",
+          "hash": "",
+          "uri": "https://www.bilibili.com/bangumi/play/ep276391/",
+          "resource_id": 454,
+          "request_id": "1566876038881",
+          "is_ad": false,
+          "cm_mark": 0,
+          "index": 3,
+          "server_type": 0
+        },
+        {
+          "id": 0,
+          "title": "埃尔梅罗二世",
+          "image": "http://i0.hdslb.com/bfs/bangumi/9d9760910e928d120e7c45010b132f765b6fb16e.png",
+          "hash": "",
+          "uri": "https://www.bilibili.com/bangumi/play/ep276925/",
+          "resource_id": 454,
+          "request_id": "1566876038881",
+          "is_ad": false,
+          "cm_mark": 0,
+          "index": 4,
+          "server_type": 0
         }
       ],
       "head": [
@@ -36,20 +70,35 @@
           "is_ad": 0,
           "link": "https://www.bilibili.com/bangumi/play/ep276391/",
           "title": "【辉夜大小姐】石上优想活下去"
-        },
-        {
+        }
+        ,{
           "id": 123213,
-          "img": "http://i2.hdslb.com/bfs/face/60a9153609998b04301dc5b8ed44c41b537a2268.jpg",
+          "img":"http://i0.hdslb.com/bfs/bangumi/975ce49ee26ea7c22068dbe566527dfbce942086.jpg",
           "is_ad": 1,
           "link": "https://www.bilibili.com/bangumi/play/ep276391/",
           "title": "一只河藏"
         }
+        ,{
+          "id": 123213,
+          "img": "http://i0.hdslb.com/bfs/bangumi/760d22aea398b8933abdc59479dbb873e757b93c.jpg",
+          "is_ad": 1,
+          "link": "https://www.bilibili.com/bangumi/play/ep276391/",
+          "title": "一只河藏"
+        }
+        ,{
+          "id": 123213,
+          "img": "http://i0.hdslb.com/bfs/bangumi/975ce49ee26ea7c22068dbe566527dfbce942086.jpg",
+          "is_ad": 1,
+          "link": "https://www.bilibili.com/bangumi/play/ep276391/",
+          "title": "一只河藏"
+        }
+
       ]
     },
     "previous": {
       "list": [
         {
-          "cover": "http://i0.hdslb.com/bfs/archive/0ca407c3d9b1febfd0d8e005f920695b346aa6ec.png",
+          "cover": "http://i1.hdslb.com/bfs/archive/c413ceed74d865bbfac1b8408c4da5519fddd973.jpg",
           "favourites": "1",
           "is_finish": 0,
           "last_time": 0,
@@ -61,7 +110,7 @@
           "watching_count": 0
         },
         {
-          "cover": "http://i2.hdslb.com/bfs/face/60a9153609998b04301dc5b8ed44c41b537a2268.jpg",
+          "cover": "http://i1.hdslb.com/bfs/archive/c413ceed74d865bbfac1b8408c4da5519fddd973.jpg",
           "favourites": "1",
           "is_finish": 0,
           "last_time": 0,
@@ -73,7 +122,7 @@
           "watching_count": 0
         },
         {
-          "cover": "http://i2.hdslb.com/bfs/face/60a9153609998b04301dc5b8ed44c41b537a2268.jpg",
+          "cover":"http://i1.hdslb.com/bfs/archive/c413ceed74d865bbfac1b8408c4da5519fddd973.jpg",
           "favourites": "1",
           "is_finish": 0,
           "last_time": 0,
