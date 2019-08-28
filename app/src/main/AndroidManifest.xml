@@ -28,12 +28,7 @@
         <activity
             android:name="com.hotbitmapgg.bilibili.module.common.SplashActivity"
             android:theme="@style/ColorTranslucentTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
 
@@ -198,6 +193,22 @@
             android:screenOrientation="landscape"
             android:theme="@style/ColorTranslucentTheme"
             android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <!-- RecyclerView下拉刷新 主页面 -->
+        <activity android:name="com.hotbitmapgg.bilibili.module.test.TestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- RecyclerView下拉刷新 上拉更多  -->
+        <activity android:name="com.hotbitmapgg.bilibili.module.test.LoadMoreActivity" />
+
+        <!-- RecyclerView下拉刷新 多布局上拉更多  -->
+        <activity android:name="com.hotbitmapgg.bilibili.module.test.LoadMoreWrapperActivity" />
 
 
     </application>

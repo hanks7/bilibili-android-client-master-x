@@ -36,7 +36,7 @@ import butterknife.BindView;
  * Created by hcc on 16/8/7 14:12
  * 100332338@qq.com
  * <p/>
- * MainActivity
+ * TestActivity
  */
 public class MainActivity extends RxBaseActivity implements NavigationView.OnNavigationItemSelectedListener {
     @BindView(R.id.drawer_layout)
