@@ -3,7 +3,7 @@ package com.hotbitmapgg.bilibili.base;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.hotbitmapgg.bilibili.utils.Ulog;
+import com.hanks.util.utils.Ulog;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 import butterknife.ButterKnife;

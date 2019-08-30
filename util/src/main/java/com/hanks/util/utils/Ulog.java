@@ -1,4 +1,4 @@
-package com.hotbitmapgg.bilibili.utils;
+package com.hanks.util.utils;
 
 import android.util.Log;
 
@@ -9,6 +9,7 @@ import android.util.Log;
  * @function 请填写
  * @email 474664736@qq.com
  */
+
 public class Ulog {
     public static final String TAG = "cc-";
 
@@ -17,7 +18,7 @@ public class Ulog {
     }
 
     public static void i(Object tag, Object content) {
-        Log.i(TAG + tag, content + "");
+        Log.i(TAG + "`" + tag, content + "");
     }
 
     public static void e(Object content) {
@@ -25,7 +26,7 @@ public class Ulog {
     }
 
     public static void e(Object tag, Object content) {
-        Log.e(TAG + tag, content + "");
+        Log.e(TAG + "`" + tag, content + "");
     }
 
 }
