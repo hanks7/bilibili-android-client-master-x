@@ -1,7 +1,6 @@
 package com.hotbitmapgg.bilibili.network;
 
 import com.facebook.stetho.okhttp3.StethoInterceptor;
-import com.hanks.util.utils.Ulog;
 import com.hotbitmapgg.bilibili.BilibiliApp;
 import com.hotbitmapgg.bilibili.network.api.AccountService;
 import com.hotbitmapgg.bilibili.network.api.BangumiService;
@@ -16,6 +15,7 @@ import com.hotbitmapgg.bilibili.network.api.UserService;
 import com.hotbitmapgg.bilibili.network.api.VipService;
 import com.hotbitmapgg.bilibili.network.auxiliary.ApiConstants;
 import com.hotbitmapgg.bilibili.utils.CommonUtil;
+import com.hotbitmapgg.bilibili.utils.Ulog;
 
 import java.io.File;
 import java.io.IOException;

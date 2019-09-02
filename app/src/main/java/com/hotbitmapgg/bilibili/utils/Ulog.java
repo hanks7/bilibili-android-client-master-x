@@ -1,4 +1,4 @@
-package com.hanks.util.utils;
+package com.hotbitmapgg.bilibili.utils;
 
 import android.util.Log;
 

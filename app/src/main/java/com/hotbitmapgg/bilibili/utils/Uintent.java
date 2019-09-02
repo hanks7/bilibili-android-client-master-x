@@ -1,11 +1,11 @@
-package com.hanks.util.utils;
+package com.hotbitmapgg.bilibili.utils;
 
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.hanks.util.R;
+import com.hotbitmapgg.ohmybilibili.R;
 
 
 /**

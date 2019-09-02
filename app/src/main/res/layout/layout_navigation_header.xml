@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@+id/header_container"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_container"
     android:layout_width="match_parent"
     android:layout_height="@dimen/navigation_header_height"
     android:clickable="true">
@@ -32,9 +32,9 @@
             android:layout_width="@dimen/navigation_avatar_size"
             android:layout_height="@dimen/navigation_avatar_size"
             android:layout_gravity="start|top"
-            android:layout_marginEnd="@dimen/activity_vertical_margin"
             android:layout_marginStart="@dimen/activity_vertical_margin"
             android:layout_marginTop="@dimen/default_grow_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
             android:src="@drawable/ico_user_default"
             app:border_color="@android:color/white"
             app:border_width="1dp" />
@@ -44,8 +44,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="@dimen/default_grow_margin"
             android:layout_marginTop="@dimen/default_grow_margin"
+            android:layout_marginEnd="@dimen/default_grow_margin"
             android:orientation="horizontal">
 
             <ImageView
@@ -98,8 +98,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/default_tiny_margin"
                     android:background="@drawable/white_border"
-                    android:text="@string/level_text"
                     android:gravity="center"
+                    android:text="@string/level_text"
                     android:textColor="@color/white"
                     android:textSize="10sp" />
 
