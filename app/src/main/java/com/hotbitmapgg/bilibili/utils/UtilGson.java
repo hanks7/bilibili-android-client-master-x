@@ -18,7 +18,6 @@ import java.lang.reflect.Type;
 public class UtilGson {
     public static void main(String[] args) {
 
-
     }
 
 

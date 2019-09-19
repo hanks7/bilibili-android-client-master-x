@@ -20,7 +20,7 @@ public abstract class RxBaseActivity extends RxAppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i(Ulog.TAG + "activity", "(" + getClass().getSimpleName() + ".java:0)");
+        Log.i(Ulog.TAG + "ui-activity", "(" + getClass().getSimpleName() + ".java:0)");
 
     }
     @Override

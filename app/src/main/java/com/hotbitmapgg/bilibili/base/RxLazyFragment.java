@@ -60,7 +60,7 @@ public abstract class RxLazyFragment extends RxFragment {
     @Override
     public void onResume() {
         super.onResume();
-        Log.i(Ulog.TAG + "fragment", "(" + getClass().getSimpleName() + ".java:0)");
+
     }
 
 
@@ -109,6 +109,7 @@ public abstract class RxLazyFragment extends RxFragment {
         super.setUserVisibleHint(isVisibleToUser);
         if (getUserVisibleHint()) {
             isVisible = true;
+            Log.i(Ulog.TAG + "ui-fragment", "(" + getClass().getSimpleName() + ".java:0)");
             onVisible();
         } else {
             isVisible = false;

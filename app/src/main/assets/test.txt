@@ -1,0 +1,1301 @@
+Day07-2 MySQL
+
+1.MySQL 是什么？
+
+ decimal(3,2)     大数据类型    三位数其中两位是小数部分
+例子: 1.12         错误的例子: 123.22
+
+1) 是一个软件(工具),数据库管理系统(DBMS)
+2) 基于C/S架构(客户端，服务端)
+3) 由MySQL AB 公司研发，现归甲骨文所有。
+4) 开放平台(并非完全开源)
+
+市场上类似产品：Oracle,DB2,SQLServer,....
+
+2.MySQL 用于做什么？
+
+1)更好的存储数据
+2)更好的管理数据
+
+3.MySQL 应用场合？
+
+电子商务
+网上银行
+.......
+
+4.MySQL 的安装的卸载？
+
+4.1 安装
+
+1) 解压到C盘根目录
+C:\mysql-5.5.11-win32
+2) 启动dos窗口(以管理员身份启动)
+3) 切换到C:\mysql-5.5.11-win32\bin
+3.1) 切换到根目录
+
+cd /
+3.2) 切换到mysql的bin目录
+
+cd C:\mysql-5.5.11-win32\bin
+
+
+4) 安装mysql 服务
+mysqld -nt-install mysql
+
+5) 启动mysql 服务
+net start mysql
+
+4.2 卸载
+
+1) 先停服务
+  net stop mysql
+2)卸载
+
+  在dos窗口的这个C:\mysql-5.5.11-win32\bin
+  目录执行
+  mysqld -remove mysql
+
+5.MySQl 登陆，退出
+
+登陆: mysql -u root -p
+ (-p 后面没有东西,是因为它没有密码) 若果有密码 比如是1234
+那么就应该这么写 mysql -u root -p 1234
+退出:\q
+
+6.MySQL 常用操作
+
+1)show status (查看mysql状态信息)
+2)show databases;(查看当前系统有哪些数据库)
+3)select user();(查看当前登陆用户)
+4)select now();(查看当前时间)
+5)select database();(查看当前正在使用的数据库)
+5)? functions;(查看系统函数,？等价于help)
+6).....
+
+7.MySQL 中的SQL? (重点)
+
+SQL是一个标准，是客户端与服务端
+进行数据交互的桥梁。
+
+SQL分类:
+
+1)DDL :数据定义语言(create,alter,drop,...)
+2)DML: 数据操纵语言(insert,update,delete,select)
+3)DCL : 数据控制语言(grant,revoke,commit,rollback)
+
+-----------------------------------------------
+Day07-3 MySQL中数据库的操作(DDL)
+
+数据库(DataBase):存储数据一个仓库
+
+1.创建数据库： create
+
+语法： ? create database
+例如：
+create database tarena;
+
+create database
+ if not exists
+tarena
+character set utf8;
+
+drop database tarena;
+
+drop database if exists tarena;
+
+
+查看当前用户有哪些数据库:
+show databases;
+
+查看数据库的创建过程：
+show create database tarena;
+
+2.修改数据库(alert)
+
+语法： ？ alter database
+例如：修改数据库的编码
+alter database tarena  character set utf8;
+
+3.删除数据库
+语法： ? drop database
+
+例如：
+drop database tarena;
+
+drop database  if exists tarena;
+
+4.打开数据库
+
+当使用数据库之前需要先打开数据
+
+use 数据库名
+
+例如: use tarena;
+
+查看当前正在使用的数据库：
+select database();
+----------------------------------------------
+Day07-4 数据库中表的操作(DDL)
+
+ 表(Table)是数据库中的最基本存储单元，
+ 由行和列组成，通常将行理解为记录，将
+ 列理解为字段或数据项。
+
+1.表的创建？
+
+语法： ？ create table
+
+create table 表名(
+列名 类型 [约束] [默认值],...);
+
+例如：
+创建表之前先打开数据库: use tarena;
+
+create table if not exists employee (
+    id int primary key auto_increment,
+    name varchar(100) not null,
+    gender enum('M','F') default 'M',
+    salary decimal(8,2),
+    email varchar(50) unique,
+    birthday datetime not null
+);
+
+
+
+create table employee(
+    id int primary key auto_increment,
+
+    salary decimal(10,2)
+
+);
+
+   insert into employee values
+     (null,11.222);
+
+drop table employee;
+
+主键：
+1)表中的一个或多个字段
+2)它的值不允许为空，且必须唯一。
+3)借助primary key 修饰
+
+查看当前数据库的表: show tables;
+显示表结构:
+
+创建表时常用类型：
+
+1) 整数类型(int,bigint,...)
+2) 浮点类型(decimal,numeric,...)
+3) 字符类型(char,varchar)
+4) 日期类型(date,datetime,timestamp,...)
+5) 其它(enum,set,blob,....)
+
+创建表时常用约束：
+
+1) 主键约束(primary key)
+2) 非空约束(not null)
+3) 唯一约束(unique)
+4) 外键约束(先不讲)
+
+例如：
+create table product1(
+    id bigint auto_increment,
+    price numeric(10,2) default 0,
+    sex enum('M,'Y','N') default 'N',
+    primary key (id)
+)engine=InnoDB character set utf8;
+
+auto_increment 表示此字段的值是可以递增的
+
+
+2.表的修改(了解)： alter
+
+例如，现有一张表
+create table student( id int primary key);
+
+ 修改表的字符编码
+alter table student default character set utf8;
+
+1) 向表中添加字段
+alter table student  add name varchar(20) not null;
+
+2) 修改表中字段名name为lastName
+alter table student change name    lastName  varchar(20) not null;
+
+3) 修改表中字段lastName的类型为varchar(100)
+alter table student modify lastName varchar(100) not null;
+
+3) 修改表中字段lastName的字符类型为varchar(100)
+
+alter table student modify  name  varchar(100)    character set utf8;
+alter table student modify  name  varchar(100)    character set utf8 not null;
+
+如果你忘记在主键自增长,
+alter table test modify id int  auto_increment;
+
+4) 删除表中的列(删除字段)
+alter table student drop lastName;
+
+3.删除表 drop
+
+语法：   drop  table
+
+例如:  drop table student;
+----------------------------------------------
+Day07-5 表中数据的操作(DML)
+以如下表为例：
+create table customer(
+     id int primary key auto_increment,
+     name varchar(100) not null,
+     phone varchar(20) not null unique,
+     email varchar(50) unique
+);
+1.向表中写入数据(insert)
+
+   insert into customer(id,name,phone,email)
+   values (null,'A','139','A@t.com');
+
+   insert into customer  values (null,'B','138','B@t.com');
+
+   insert into customer
+   values ('A','139','A@t.com'); 错误
+
+   insert into customer(id,name,email)
+   values (null,'B','A@t.com');错误 phone必须给值
+
+   insert into customer(id,name,phone)
+   values (null,'B','133');
+
+   同时插入多条数据
+   insert into customer values
+   (null,'E','133','E@t.com'),
+   (null,'F','139','F@t.com');
+
+2.修改表中数据(update)
+   update customer set name='AA'  where id=1;
+
+   update customer set name='AA',email='AA@t.com'  where id=1;
+
+3.删除表中数据(delete)
+
+  delete from customer where id=1;
+  delete from customer where email is null;
+
+  delete from customer;
+
+  delete from customer where id=1;
+
+4.简单查询表中数据(select)
+   select * from customer;
+--------------------------------------------
+
+Day09-1 MySQL 回顾
+------------------------------------------
+1.MySQL 是什么?(DBMS)
+2.MySQL 的基本架构?(C/S)
+3.MySQL 的安装,卸载?
+4.MySQL 的登陆，退出？(root)
+5.MySQL 中的常用操作？
+6.MySQL 中的SQL简介?(DDL,DML,DCL)
+7.MySQL 中数据库的基本操作?(create,alter,drop)
+8.MySQL 中表的基本操作?(create,alter,drop)
+9.MySQL 表中数据的基本操作?(insert,update,delete,select)
+------------------------------------------------
+Day09-2 MySQL 中的事务操作
+
+1.何为事务(Transaction)?
+
+1)事务是一个不可分割的逻辑业务。
+2)此业务中的所有操作是捆绑在一起的。
+3)这些操作在执行时要么都成功要么都失败。
+
+2.事务的作用？
+保证操作的原子性，一致性，隔离性，持久性。
+即事务的四大特性：ACID
+
+1)原子性：不可分割性，例如转账操作。
+2)一致性：操作前后数据是一致的。(例如取钱)
+3)隔离性：事务之间互不影响。
+4)持久性：事务一旦提交可以持久性保存在数据库
+
+3.MySQL中的事务操作？
+
+MySQL默认事务控制是自动提交方式，当执行
+完一个DML语句以后事务会自动提交。
+
+MySQL中的事务控制语句:
+
+******************
+开启事务：
+set autocommit=0；
+
+其中0表示手动控制事务，默认为1 自动控制事务
+
+insert ...
+update....
+
+
+commit;
+提交事务(提交以后会自动结束)
+******************
+
+当需要撤销某个事务时，不是执行commit,
+而是执行rollback（回滚），但无论是commit,
+还是rollback整个事务都会结束。
+
+
+
+set autocommit=0;
+
+insert ...
+insert ....
+
+rollback; （回滚，撤销事务，这两个insert都不会
+写到数据库）
+
+当需要撤销一部分操作时，通常要在
+事务中设置回滚点
+
+set autocommit=0; （off）与其对应的就是on
+
+insert 1
+insert 2
+
+savepoint p1; (回滚点)
+
+insert 3,
+insert 4
+
+rollback to p1; (撤销insert3,4操作)
+
+commit; (insert 1,insert2 会写到数据库)
+
+
+在实际应用中事务与业务紧密联系在一起，
+事务的控制应该在程序业务层。
+-----------------------------------------------
+Day09-3 表的设计（重点，难点,了解）
+
+1.表的设计关系
+2.表的设计范式
+
+-----------------------------------------------
+Day09-4 表的关系设计
+
+在实际应用中表关系通常有如下三种设计：
+1)one2many
+2)one2one
+3)many2many
+
+1.one2many (一对多)
+
+1) 一个用户有多个订单。
+2) 一个部门可以有很多雇员。
+3) 一个国家可以有很多省份。
+
+这样的关系在表中如何实现？
+
+例如：部门和雇员
+
+create table department (
+   id int primary key auto_increment,
+   name varchar(100) not null
+);
+create table employee(
+   id int primary key auto_increment,
+   name varchar(100) not null,
+   salary int default 0,
+   dept_id int
+);
+关系的建立:
+// alter table department modify name varchar(100) not null unique;
+alter table employee  add foreign key(dept_id) references department(id);
+
+insert  department values (null,'A');
+insert  department values (null,'B');
+insert  department values (null,'C');
+
+insert into  employee values
+ (null,'aaa',13123,1),
+ (null,'aaa',13123,3);
+
+select * from employee;
+
+通常将这样的一个字段称之为外键.
+外键：
+1)表中的一个或多个字段
+2)它的类型，值参考关系中主键的类型和值
+
+向表中写入数据：
+
+insert  department values (null,'A');
+insert  department values (null,'B');
+insert employee values (null,'EA',100,1);
+insert employee values (null,'EB',100,2);
+insert employee values (null,'EC',100,1);
+insert employee values (null,'EC',100,3); 错
+
+当删除department表中数据时应首先
+将关系表Employee中相关联的记录的
+外键设置为null,或者先删除关联记录。
+
+update  employee set dept_id=null  where id=1;
+
+delete from department where id=1;
+
+假如想删除部门表，需要先删除关系表
+Employee中的外键约束
+
+alter table employee drop foreign key dept_id;
+
+约束名可以采用
+show create table employee
+方式查看
+
+当删除"部门表"中数据时级联删除
+关系表"雇员表"中关联数据，添加
+外键约束时，可以采用如下方式：
+
+(上面三句话是不是非常难以理解,其实很简单,
+employee 中 departid 和 department 中的
+id 是关联的如果你想删除department 中的
+一条数据,那么employee 带有 关联的departid
+就会被删除,如果你想这样操作的话,你必须按照
+下面sql语句添加外键,我个人认为应该不常用,
+我可不想把employee中数据也删除)
+
+alter table employee
+add foreign key (dept_id)
+references department(id)
+on delete cascade;
+
+当删除"部门表"中数据时级联置空
+关系表"雇员表"中外键的值，添加
+外键约束时，可以采用如下方式：
+
+(如果你想删除department 中的
+一条数据,那么employee 带有 关联的departid
+就会设置为 null ,如果你想这样操作的话,你必须按照
+下面sql语句添加外键,我个人认为应该常用的,)
+
+alter table employee
+add foreign key (dept_id)
+references department(id)
+on delete set null;
+
+总结：
+对于one2many关系的实现通常要在
+many的一端添加一个外键(FK).
+
+2.one2one 关系
+
+一个公司只能发行一种类型股票
+在达内一个学生一台电脑
+.....................
+
+one2one是一个特殊的one2many
+我们只要限制one2many中的many
+将其添加一个唯一约束就可以了
+
+例如
+
+create table company(
+   id int primary key,
+   name varchar(100) not null
+);
+create table stock(
+  id int primary key,
+  code varchar(50) not null unique,
+  cid int unique
+);
+alter table stock
+add foreign key (cid)
+references company (id);
+
+对于one2one的实现通常是:FK+UK
+
+对于one2one关系的实现，外键设置在
+哪一端取决于具体业务。
+
+例如：在达内一个学生(student)
+一台电脑(Computer).
+
+create table student(
+   id int primary key,
+   name varchar(20)
+);
+create table computer(
+   id int primary key,
+   code varchar(20),
+   sid int unique
+);
+alter table computer add foreign key(sid)
+references student (id);
+
+3.Many2Many (多对多)
+
+老师<-->学生
+学生<-->课程
+角色<-->权限
+
+对于多对多的实现通常要借助中间表实现
+
+学生课程关系：
+
+create table student(
+   phone varchar(20) primary key,
+   name varchar(20) not null
+);
+create table course(
+   id int primary key,
+   name varchar(30) not null
+);
+借助中间表实现关系
+create table  scoretab(
+   sid varchar(20),
+   cid int,
+   score int,
+   primary key (sid,cid)
+);
+复合主键：由多个字段组成，其值的组合不能
+出现重复。
+
+添加外键约束：
+alter table scoretab add foreign key (sid)
+references student (phone);
+
+alter table scoretab add foreign key (cid)
+references course (id);
+
+总结表关系实现：
+
+1)one2many: FK
+2)one2one: FK+UK
+3)many2many: 中间表
+
+----------------------------------------------
+Day09-4 表的设计范式（重点，难点，了解）
+
+所谓范式一般指的是设计表的应遵循的一些规则
+
+第一范式：属性(字段)不可再分；
+例如
+create table employee(
+   id int primary key,
+   name varchar(200) not null,
+   phone varchar(20) not null
+);
+假如phone表示公司电话，自己手机号，以上表
+的设计就不满足第一范式。
+create table employee(
+   id int primary key,
+   name varchar(200) not null,
+   jobPhone varchar(20),
+   myPhone varchar(20) not null
+);
+第二范式：非主属性不能部分依赖主属性(字段)
+例如:成绩表
+create table scoretab(
+   sid  int,
+   cid  int,
+   score int,
+   cname varchar(100),
+   primary key (sid,cid)
+);
+以上表的设计是否满足第二范式？不满足,
+cname(课程名)依赖于CID(课程ID)但不依
+赖于SID(学生id),应该将cname放到课程表。
+
+第三范式：非主属性不能依赖于非主属性
+
+例如：学生表
+create table student(
+  id int primary key,
+  name varchar(100) not null,
+  schoolName varchar(200)  not null,
+  schoolPhone varchar(20) not null
+);
+以上表是否满足第三范式的设计？不满足
+存在非主属性schoolPhone依赖于非主属
+性schoolName.修改如下:
+
+create table student(
+  id int primary key,
+  name varchar(100) not null,
+  schoolId int
+);
+create table school(
+  id int primary key,
+  schoolName varchar(200)  not null,
+  schoolPhone varchar(20) not null
+);
+
+
+insert into school values(1,"aaa","111"),(2,"bbb","222");
+
+insert into student values(1,"aaa",1),(2,"bbb",2);
+
+insert into student values(3,"aaa",1),(4,"bbb",1);
+
+
+alter table student
+add foreign key(schoolId)
+references school(id);
+
+删除外键
+alter table student drop foreign key shcoolId;
+----------------------------------------------
+Day09-5 深入MySQL中的查询（重点）
+
+准备工作：导入一些表和数据
+
+source d:\hr_mysql.sql
+
+以上语句表示执行某个sql文件中的sql语句
+
+MySQL 中的查询类型：
+
+1) 基本查询
+2) 限制查询
+3) 排序查询
+4) 分组查询
+5) 嵌套查询
+6) 多表查询
+---------------------------------------------
+Day09-1 SQL查询(简单查询)
+
+1.查询当前日期?
+   select now();
+   其中now()为系统函数
+2.查询当前登陆用户？
+   select user();
+3.查询当前正在使用的数据库？
+   select database();
+
+   查看系统函数的方式： ? functions
+
+4.查询部门表中所有部门信息？
+
+   select * from departments;
+   其中"*"代表所有列。
+
+5.查询部门表中的部门id，部门名称？
+
+   select id,department_name
+   from departments;
+
+6.查询雇员的名字，薪水，入职日期？
+   select first_name as name,salary,hire_date
+   from employees;
+
+   其中"name"为first_name的别名，"as"可以省略
+
+7. 查询每个雇员的薪水加300的值？
+
+    select employee_id,salary+300   from employees;
+
+8. 查询所有人的薪水总和？
+    select sum(salary) from employees;
+    其中sum函数用于求和
+
+9.查询公司总计有多少雇员
+   select  count(*) from employees;
+   其中count函数用于统计个数。
+
+10.查询所有雇员的平均薪水？
+   select avg(salary)   from employees;
+   其中"avg"函数表示求平均薪水
+
+11.查询雇员的最高和最低薪水？
+   select max(salary),min(salary) from employees;
+
+
+---------------------------------------------
+Day09-2 SQL查询(限制查询)
+
+1.查询薪水大于10000的雇员的名字？
+
+   select first_name,salary
+   from employees
+   where salary>10000;
+
+2.查询薪水大于等于10000
+  小于等于20000的雇员的名字，薪水？
+
+   select first_name,salary
+   from employees
+   where salary>=10000&&salary<=20000;
+
+   或者
+
+   select first_name,salary
+   from employees
+   where salary between 10000 and 20000;
+
+3.查询薪水等于10000或者
+  等于20000的雇员的名字，薪水？
+
+   select first_name,salary
+   from employees
+   where salary=10000||salary=20000;
+
+    或者
+
+    select first_name,salary
+    from employees
+    where salary in (10000,20000,30000);
+
+4.查询1999年入职的雇员的名字，入职日期?
+
+   select first_name,hire_date
+   from employees
+   where year(hire_date)='1999';
+
+   或者
+
+   select first_name,hire_date
+   from employees
+   where hire_date like '1999%';
+
+   其中"%"代表任意的0个或多个字符
+
+5.查询名字中第二个字母为a的雇员的名字
+
+   select first_name,hire_date
+   from employees
+   where first_name like '_a%';
+
+   其中"_"代表任意的一个字符。"%"代表任意的多个字符。
+
+6.查询提成("提成"字段为commission_pct )为null的雇员的名字，薪水？
+
+   select first_name,salary
+     from employees
+     where commission_pct is null;
+
+7.查询提成不为null的雇员的名字，薪水？
+
+   select first_name,salary
+   from employees
+   where commission_pct is not null;
+
+8.查询雇员表中前5条记录中的雇员名字和薪水。
+
+   select first_name,salary
+   from employees
+   limit 5;
+
+9.查询雇员表中第1条到第3条记录中的
+  雇员名字和薪水。
+
+ 其实意思这个:表示从第1条开始取，取3条  不包括第0条;
+(上面的那句话容易造成歧义,
+并不是第一条到第三条,而是第一条的后三条)
+   select first_name,salary
+   from employees
+   limit 0,3;
+
+
+
+   表示从第7条开始取，取3条  不包括第6条;
+   select first_name,salary
+   from employees
+   limit 6,3;
+
+   假设现有10条记录，每页最多显示3条，
+   总计可以分为4页，现取第三页：
+
+   select first_name,salary
+   from employees
+   limit 6,3;
+
+   以上这个语句经常用于分页查询
+
+   总页数的计算方法：
+   10%3==0？10/3:10/3+1
+
+    总结：
+    where 子句用于设置查询条件，一定
+    要写在from子句之后，
+  “limit”子句用于限制返回的记录函数，
+     假如出现limit要放在所有子句最后。
+
+10.练习
+
+1) 查询2000年入职的员工的人数？
+
+select year(hire_date),count(*)
+from employees
+where year(hire_date)='2000';
+
+2) 计算2月份入职的员工的薪水总和？
+
+select month(hire_date), sum(salary)
+from employees
+where month(hire_date)='02';
+
+或者
+select month(hire_date), sum(salary)
+from employees
+where hire_date like '%-02-%';
+
+查函数： ? functions
+
+3) 显示佣金为空的前5条记录中的
+    雇员名字，入职日期，佣金？
+
+select  first_name,hire_date,commission_pct
+from employees
+where commission_pct is null
+limit 5;
+----------------------------------------------
+Day09-3 排序查询(order by  ， asc|desc)
+
+1.按入职日期升序显示雇员的名字和薪水，
+   入职日期相同，则薪水降序排序。
+
+   select  first_name,hire_date,salary
+   from employees
+   order by hire_date asc,salary desc;
+
+   其中
+"asc"   	表示升序		(可以省略),
+"desc" 	表示降序。
+
+   或者
+
+   select  first_name,hire_date,salary
+   from employees
+   order by 2,3 desc
+   limit 10;
+
+   其中"2"和"3"表示select列表中列的序号
+
+   对于order by子句的应用上，假如没有limit
+   子句，它放在所有子句的最后，
+   且是最后执行。
+
+2. 查询雇员的薪水加300以后的值，
+   并新的薪水降序排序。
+
+   select first_name,salary+300 newSalary
+   from employees
+   order by newSalary desc;
+
+-----------------------------------------------
+
+Day09-4 分组查询 (group by ,having)
+
+1.求每个部门的平均薪水？
+   select department_id,avg(salary)
+   from employees
+   where department_id is not null
+   group by department_id;
+   其中"group"子句用于分组
+
+select avg(salary)
+   from employees
+   group by department_id;
+
+2.求每个工种的人数？
+   select  job_id,count(*)
+   from employees
+   group by job_id;
+
+3.求每年入职的人数？
+
+   select year(hire_date),count(*)
+   from employees
+   group by year(hire_date);
+
+4.求部门薪水总和大于50000的部门id
+和薪水总和，并按总和薪水降序排序。
+
+   select department_id,sum(salary)
+   from employees
+   where department_id is not null
+   group by department_id
+   having sum(salary)>50000
+   order by 2 desc;
+
+
+   其中"having"子句用于限制分组以后的
+   结果。
+
+5.求每个部门的薪水总和，平均薪水，最大
+薪水，最小薪水，人数。
+
+   select  department_id,sum(salary),
+   avg(salary),
+   max(salary),min(salary),count(*)
+   from employees
+   where department_id is not null
+   group by department_id;
+-----------------------------------------------
+作业
+1.总结表的设计，查询
+2.实践练习？
+
+1) 查询工种的人数，平均工资。
+2) 查询1999年2月份入职的员工的名字，薪水，
+    并按降序排序。
+3) 求平均薪水最高的那个部门的部门id？
+
+select e.department_id,max(e.d) from (select  department_id, avg(salary) d  from employees
+ where department_id is not null
+ group by department_id order by 2 desc) e;
+
+或者 :
+select  department_id, avg(salary)  from employees
+ where department_id is not null
+ group by department_id order by 2 desc limit 1;
+
+4) 求佣金不为空的雇员的名字薪水，按佣金
+    降序排序。
+
+3.预习嵌套查询，多表查询。
+----------------------------------------------
+
+Day10-2 MySQL 查询(嵌套查询)
+
+1.查询比雇员201的薪水还要高的雇员编号，
+   薪水。
+
+   select employee_id,salary
+   from employees
+   where salary>(
+   select salary
+   from employees
+   where employee_id=201);
+
+2.求比部门50平均薪水还要高的部门平均薪水？
+
+   select department_id,avg(salary)
+   from employees
+   where department_id is not null
+   group by department_id
+   having avg(salary)>(
+
+   select avg(salary)
+   from employees
+   where department_id=50
+
+);
+
+select avg(salary) ,department_id  from employees where department_id is not null
+group by department_id  having avg(salary)>(
+select avg(salary)  from employees where department_id =50
+group by department_id
+)
+
+
+
+--------------------------------------------
+Day10-3 MySQL 查询(多表查询)
+
+当我们需要的数据来自多张表时可以执行
+多表查询。
+
+1.求雇员201所在的部门的部门名称？
+
+
+select e.employee_id, e.department_id ,
+d.department_name
+from  departments d ,employees e
+ where e.department_id=d.department_id
+and e.employee_id=201;
+
+select employees.department_id ,
+departments.department_name
+from  departments  ,employees
+ where employees.department_id=departments.department_id
+and employees.employee_id=201;
+
+
+
+或者
+
+select employee_id,e.department_id,department_name
+
+from
+
+employees e inner join departments d
+on e.department_id=d.department_id
+
+where e.employee_id=201;
+
+其中"inner join"表示内连接，"inner"可以省略，
+on后写连接条件。
+
+2.求雇员201所在的部门的部门名称，以及这个
+部门所在城市？
+
+select employee_id,e.department_id,department_name,city
+from
+employees e
+join
+departments d
+join
+ locations l
+on
+e.department_id=d.department_id and
+d.location_id=l.location_id
+where e.employee_id=201;
+
+2.求雇员201所在的部门的部门名称,城市名称,国家名称？
+select e.employee_id,d.department_id, d.department_name,l.city,c.country_name from
+employees e join departments d join
+ locations l join countries c
+on
+ e.department_id = d.department_id
+and d.location_id=l.location_id
+and c.country_id=l.country_id
+where e.employee_id=201;
+
+3.求比本部门平均薪水还要高的雇员名字，薪水。
+
+select first_name, e1.department_id,salary, e2. avg_sal
+ from employees e1 join
+         (select department_id,avg(salary) avg_sal
+          from employees
+          where department_id is not null
+          group by department_id)e2
+ on e1.department_id=e2.department_id
+ where e1.salary>e2.avg_sal;
+
+当需要将子查询看成是一张表时，一定要给
+这个表起个别名。
+求比本部门平均薪水还要高的雇员名字，薪水。
+
+select first_name, e1.department_id,salary
+ from employees e1
+ where e1.salary>(
+    select avg(e2.salary)
+    from employees e2
+    where e2.department_id=e1.department_id
+);
+
+4.查询每个雇员所在的部门信息？
+
+select
+employee_id,e.department_id,department_name
+ from
+employees e
+ left outer join
+ departments d
+ on
+e.department_id=d.department_id;
+
+select employee_id,e.department_id,department_name
+ from employees e , departments d where  e.department_id=d.department_id;
+
+(多个左外链接)
+select
+
+employee_id,e.department_id,department_name,l.city
+
+ 	from ( employees e left outer join departments d on e.department_id=d.department_id)
+
+left join locations l on d.location_id=l.location_id
+
+********************************
+
+select
+employee_id,
+e.department_id,
+department_name,
+l.city
+ 	from
+employees e
+left outer join departments d
+on e.department_id=d.department_id
+left join locations l
+on d.location_id=l.location_id
+
+其中"left outer join"表示左外连接，outer
+可以省略，对于左边表而言，满足on条件的
+要显示，不满足on条件的也要显示。
+
+5.查询每个部门及这个部门的雇员信息？
+
+select
+employee_id,
+d.department_id,
+department_name
+ from
+employees e
+ right outer join
+ departments d
+ on e.department_id=d.department_id
+
+select employee_id,department_id
+ from employees where employee_id=178;
+
+
+
+其中"right outer join"表示右外连接，outer
+可以省略，对于右边表而言，满足on条件的
+要显示，不满足on条件的也要显示。
+
+6.笛卡尔积
+
+
+
+
+
+select *  from employees,departments;
+
+将两张表没有关联的全部都显示出来,感觉一点卵用都没有
+
+通长可以借助此数据作为测试用。
+
+ create table mytemp
+ as
+ select employee_id,department_name
+ from employees,departments;
+
+-------------------------------------------
+Day10-4 MySQL 存储过程
+
+delimiter //
+create procedure allp()
+   begin
+   select *  from employees;
+   end
+ // delimiter ;
+
+注意:那个黄色的分号非常重要,不加会报错.
+delimiter 表示分隔符 存储过程必须写在两个//之间 procedure 就是"过程"的意思
+使用 call allp();
+-------------------------------------------
+Day10-4 MySQL 中的视图(了解)
+
+1.视图(View)是什么？
+1)数据库中的一个对象
+2)虚拟的表(基于表构建，但不存储数据)
+3)对外的窗口
+
+2.视图的作用？
+
+1)提高系统数据的安全。
+2)简化程序中SQL语句的编写。
+
+3.视图的创建
+
+应用1：
+  create view empv2
+  as
+  select first_name,salary
+  from employees;
+
+执行查询 : select * from empv2;
+
+应用2：视图创建以后存储在数据库中
+
+create view empv3
+as
+select department_id,avg(salary) avg_sal
+from employees
+group by department_id;
+
+执行如下查询：
+
+select first_name, e1.department_id,salary
+from employees e1 join empv3 e2
+on e1.department_id=e2.department_id
+where e1.salary>e2.avg_sal;
+
+3.视图的删除
+
+drop view empv2;
+----------------------------------------------
+Day10-5 MySQL 中的索引（了解)
+
+1.何为索引？(index)
+
+假如将一张表理解为一本书，那么书的大纲就
+是表中的索引。
+
+2.使用索引的目的?
+
+提高查询的速度。
+
+3.何时使用索引？
+
+1)经常查询表中数据时，以某个字段作为查询条件。
+   例如: select employee_id , salary
+   from employees  where first_name like '%A%';
+2)表中数据量比较大，而我们需要的数据非常
+   少时。
+
+4.索引的创建？
+  create index fname on employees(first_name);
+  索引创建以后在查询时假如查询条件中
+  使用到了first_name,此时会自动使用索
+  引。
+
+5.索引的删除？
+  drop index fname on employees;
+
+6.查看索引
+show index from employees;
+----------------------------------------------
+Day10-5 MySQL 中的用户管理？(了解)
+
+1.创建用户？(具备创建用户的权限)
+
+1)本机用户(装有数据库的这台计算机登陆)
+
+create user 'tarena'@'localhost'
+identified by 'tarena';
+
+此用户创建以后会存储在user表中。
+
+登陆:  mysql -u tarena -h localhost  -p
+
+2)远程用户（可以在其它机器上访问本机数据库）
+create user 'username'@'host' identified by 'password';
+
+username：你将创建的用户名
+host		：指定该用户在哪个主机上可以登陆如果是本地用户可用localhost，如果想让该用可以	从									      任 意远程主机登陆，可以使用通配符%
+password ：该用户的登陆密码，密码可以为空，如果为空则该用户可以不需要密码登陆服务器
+
+CREATE USER 'dog'@'localhost' IDENTIFIED BY '123456';
+CREATE USER 'pig'@'192.168.1.101_' IDENDIFIED BY '123456';
+CREATE USER 'pig'@'%' IDENTIFIED BY '123456';
+CREATE USER 'pig'@'%' IDENTIFIED BY '';
+CREATE USER 'pig'@'%';
+
+create user test identified by '123456'; =create user 'test'@'%' identified by '123456';
+如果不加 @之后的内容默认 为@'%'
+
+create user 'gsd1503'@'%'  identified by 'gsd1503';
+
+
+账号:test
+密码:123456
+
+登陆：
+mysql -u gsd1503 -h 192.168.188.40 -p
+
+2.给用户权限？(通过root用户登陆)
+grant all on hr.* to 'gsd1503'@'%';
+grant all on hr.* to 'tarena'@'localhost';
+grant all on hr.* to 'test';
+grant  select on *.*  to 'test'@'192.168.%.%';
+
+ hr.*表示 数据库hr 中所有的表   如果是*.* 那么就是所有的数据库
+
+3.撤销权限?(通过root用户登陆)
+revoke all on hr.* from  'gsd1503'@'%';
+revoke all on hr.* from 'tarena'@'localhost';
+4.删除用户?(通过root用户登陆)
+drop user 'gsd1503'@'%';
+
+drop user 'tarena'@'localhost';
+----------------------------------------------
+Day10-6 MySQL 其它客户端应用（了解）
+
+1.Eclipse
+2.MySQL Front
+3.........
