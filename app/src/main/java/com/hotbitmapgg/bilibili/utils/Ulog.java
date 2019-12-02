@@ -21,6 +21,12 @@ public class Ulog {
         Log.i(TAG + "`" + tag, content + "");
     }
 
+    public static void i(Object tag,Object... content) {
+        for (Object o : content) {
+            Log.i(TAG + tag, o + "");
+        }
+    }
+
     public static void e(Object content) {
         Log.e(TAG, content + "");
     }

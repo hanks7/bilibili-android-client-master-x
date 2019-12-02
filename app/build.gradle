@@ -16,11 +16,11 @@ props.load(new FileInputStream(file("configuration.properties")))
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.hotbitmapgg.ohmybilibili"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 25
         versionCode props.getAt("versionCode") as int
         versionName props['versionName']
